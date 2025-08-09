@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+# InCheckOutCheck
+This will be the start of my ethics first mlOps Framework where I plan to grow over time.
+=======
+>>>>>>> 5977ff6 (added docker (not working yet) and Fast api and more tests)
 # Ethics-First MLOps Framework
 ## Overview
 A lightweight, local-first MLOps framework focused on ethical and reproducible machine learning. Built for small teams that lack enterprise resources but need explainable, bias-audited pipelines.
@@ -34,4 +41,9 @@ DATA LOAD - AUDIT - Explainers
 ## Setup
 ```bash
 pip install -r requirements.txt
+<<<<<<< HEAD
 python start_pipeline.py --config config/default.yaml
+=======
+python start_pipeline.py --config config/default.yaml
+>>>>>>> 85f617b (Initial Framework with API, CLI, Tests)
+>>>>>>> 5977ff6 (added docker (not working yet) and Fast api and more tests)
