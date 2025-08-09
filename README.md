@@ -88,11 +88,10 @@ InCheckOutCheck/
 ## Pipeline Components
 Setup DONE
 **Data Intake:** `load_data.py` handles ingestion and validation. - DONE
-**Training:** `train_model.py` supports config-driven training runs.
+**Training:** `train_model.py` supports config-driven training runs. DONE
 **Evaluation:** Supports fairness audits using Aequitas or Fairlearn. - DONE
-**Inference:** `predict.py` exposes FastAPI or CLI prediction service.
-**Deployment:** `api.py` hosts REST endpoints via FastAPI.
-**Retraining:** Simulates drift detection or audit-triggered retraining.
+**Inference:** `predict.py` exposes FastAPI or CLI prediction service. DONE
+**Deployment:** `api.py` hosts REST endpoints via FastAPI. DONE
 
 ## TESTING
 DATA LOAD - AUDIT - Explainers 
