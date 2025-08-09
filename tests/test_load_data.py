@@ -19,5 +19,12 @@ def test_sample_data_loads():
     suspicious = all(str(col).strip().isdigit() for col in df.columns[:3])
     assert not suspicious, "Header row missing or misread – columns look like data values."
 
-    print("\n✅ Data loaded successfully:")
+
+def test_hf_parquet_load():
+    path = "hf://datasets/MegaScience/MegaScience/data/train-00000-of-00001.parquet"
+    df = load_data(path)
+    assert isinstance(df, pd.DataFrame)
+    assert not df.empty   
+
+    print("\nData loaded successfully:")
     print(df.head())

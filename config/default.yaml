@@ -1,0 +1,7 @@
+app:
+  name: EthicsML Intake API
+storage:
+  root: "artifacts"
+  models_subdir: "models"
+  datasets_subdir: "datasets"
+  registry_file: "registry.json"

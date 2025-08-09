@@ -28,10 +28,15 @@ def test_shap_explainer_runs(synthetic_data):
 
     output_file = "shap_test_output.json"
     summary = explain_with_shap(model, X_df[:10], output_path=output_file)
-
+    print("\n[SHAP] Explanation summary:")
+    print(summary)
     assert isinstance(summary, dict)
     assert os.path.exists(output_file)
     assert "feature_0" in summary  # Check at least one expected key
+
+    with open(output_file, "r") as f:
+        print("[SHAP] Output file contents:")
+        print(f.read())
 
     os.remove(output_file)
 
@@ -51,11 +56,15 @@ def test_lime_explainer_runs(synthetic_data):
         output_path=output_file
     )
 
+    print("\n[LIME] Explanation as list:")
+    print(explanation.as_list())
     assert hasattr(explanation, "as_list")
     assert os.path.exists(output_file)
 
     with open(output_file, "r") as f:
         lines = f.readlines()
+        print("[LIME] Output file contents:")
+        print("".join(lines))
         assert any("feature" in line for line in lines)
 
     os.remove(output_file)
