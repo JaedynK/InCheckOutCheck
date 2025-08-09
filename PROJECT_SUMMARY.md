@@ -74,7 +74,6 @@ rootdir: C:\Users\Jaedyn\MLops_framework\InCheckOutCheck
 plugins: anyio-4.9.0, hydra-core-1.3.2
 collecting ... collected 9 items
 
-... (output truncated for brevity) ...
 
 ================== 9 passed, 17 warnings in 94.26s (0:01:34) ==================
 ```
