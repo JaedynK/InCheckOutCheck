@@ -1,11 +1,46 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
 # InCheckOutCheck
 A lightweight, local-first MLOps framework focused on ethical and reproducible machine learning. Built for small teams that need explainable, bias-audited pipelines.
 
-## Project Structure
+# Ethics-First MLOps Framework
+## Overview
+A lightweight, local-first MLOps framework focused on ethical and reproducible machine learning. Built for small teams that lack enterprise resources but need explainable, bias-audited pipelines.
+
+Category	    Library	    Purpose	                                        Use Case
+Bias Auditing	fairlearn	Group   fairness metrics & visual diagnostics	Evaluation
+Bias Auditing	aequitas	Audit report across protected attributes	    Evaluation
+Explainability	shap	    Feature attribution and global explanation	    Explainability, Reporting
+Explainability	lime	    Local explanation of individual predictions	    Explainability
+
+
+ML + Utilities	scikit-learn, pandas, numpy	Model training, data prep	All stages
+
+## What You Can Test
+- Model loading and text generation (QwenModel)
+- API endpoints (FastAPI)
+- Data loading utilities
+- Explainability (LIME, SHAP)
+- Fairness & bias auditing (Aequitas, Fairlearn)
+- Test data and outputs
+
+## Model Caching
+The Qwen model is cached locally in `pipeline/modeling/qwen3-4b-thinking-2507/` and is ignored by git. To pre-download the model, run:
+```bash
+python pipeline/modeling/trained_model.py
 ```
+
+## How to Run All Tests
+From the `InCheckOutCheck` directory:
+```powershell
+$env:PYTHONPATH='.'; pytest -s -v > all_test_output.txt 2>&1
+```
+This will run all tests and save detailed output to `all_test_output.txt`.
+
+## Example Test Output
+See `all_test_output.txt` for full details of each test, including print statements, model outputs, audit results, and warnings.
+
+
+## Directory Structure.
 InCheckOutCheck/
 ├── api/
 │   ├── main.py
@@ -48,52 +83,6 @@ InCheckOutCheck/
 ├── README.md
 ├── requirements.api.txt
 └── requirements.txt
-```
-
-## What You Can Test
-- Model loading and text generation (QwenModel)
-- API endpoints (FastAPI)
-- Data loading utilities
-- Explainability (LIME, SHAP)
-- Fairness & bias auditing (Aequitas, Fairlearn)
-- Test data and outputs
-
-## Model Caching
-The Qwen model is cached locally in `pipeline/modeling/qwen3-4b-thinking-2507/` and is ignored by git. To pre-download the model, run:
-```bash
-python pipeline/modeling/trained_model.py
-```
-
-## How to Run All Tests
-From the `InCheckOutCheck` directory:
-```powershell
-$env:PYTHONPATH='.'; pytest -s -v > all_test_output.txt 2>&1
-```
-This will run all tests and save detailed output to `all_test_output.txt`.
-
-## Example Test Output
-See `all_test_output.txt` for full details of each test, including print statements, model outputs, audit results, and warnings.
-=======
->>>>>>> 5977ff6 (added docker (not working yet) and Fast api and more tests)
-# Ethics-First MLOps Framework
-## Overview
-A lightweight, local-first MLOps framework focused on ethical and reproducible machine learning. Built for small teams that lack enterprise resources but need explainable, bias-audited pipelines.
-
-Category	    Library	    Purpose	                                        Use Case
-Bias Auditing	fairlearn	Group   fairness metrics & visual diagnostics	Evaluation
-Bias Auditing	aequitas	Audit report across protected attributes	    Evaluation
-Explainability	shap	    Feature attribution and global explanation	    Explainability, Reporting
-Explainability	lime	    Local explanation of individual predictions	    Explainability
-
-
-ML + Utilities	scikit-learn, pandas, numpy	Model training, data prep	All stages
-
-
-## Directory Structure.
-📁 config/ # YAML/JSON config files
-📁 pipeline/ # Core ML lifecycle components
-📁 tests/ # Pytest-based testing suite
-📄 README.md 
 
 
 ## Pipeline Components
