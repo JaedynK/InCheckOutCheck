@@ -99,9 +99,3 @@ DATA LOAD - AUDIT - Explainers
 ## Setup
 ```bash
 pip install -r requirements.txt
-<<<<<<< HEAD
-python start_pipeline.py --config config/default.yaml
-=======
-python start_pipeline.py --config config/default.yaml
->>>>>>> 85f617b (Initial Framework with API, CLI, Tests)
->>>>>>> 5977ff6 (added docker (not working yet) and Fast api and more tests)
